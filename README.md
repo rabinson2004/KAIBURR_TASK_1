@@ -1,11 +1,11 @@
 
-# ⚙️ Task 1 - Backend 
+# Task 1 - Backend 
 
 A **Java Spring Boot** application that provides REST APIs to manage and execute shell command tasks stored in **MongoDB**. Tasks can be created, executed, searched, and deleted programmatically.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 # Get all tasks
 ![get](https://github.com/user-attachments/assets/5aac6b89-6f65-4bc7-88ea-50a2f843cb2a)
@@ -27,16 +27,16 @@ A **Java Spring Boot** application that provides REST APIs to manage and execute
 
 ---
 
-## ✨ Features
+## Features
 
-* 🔧 **CRUD Operations**: Create, read, update, and delete tasks
-* 💻 **Command Execution**: Execute shell commands and store the output
-* 🗄️ **MongoDB Integration**: Persistent storage for tasks and execution logs
-* 🔒 **Validation**: Reject unsafe commands like `rm`, `sudo`, etc.
+*  **CRUD Operations**: Create, read, update, and delete tasks
+*  **Command Execution**: Execute shell commands and store the output
+*  **MongoDB Integration**: Persistent storage for tasks and execution logs
+*  **Validation**: Reject unsafe commands like `rm`, `sudo`, etc.
 
 ---
 
-## 🧰 Prerequisites
+##  Prerequisites
 
 * Java 21
 * Maven 3.8+
@@ -45,7 +45,7 @@ A **Java Spring Boot** application that provides REST APIs to manage and execute
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 ### 1. Clone the Repository
 
@@ -74,7 +74,7 @@ java -jar target/rabin-0.0.1-SNAPSHOT.jar app.jar
 
 ---
 
-## 📖 API Documentation
+##  API Documentation
 
 ### Overview
 
@@ -92,7 +92,7 @@ The Task Manager API provides endpoints for managing and executing tasks. Each t
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 ### MongoDB Connection
 
@@ -125,7 +125,7 @@ curl -X POST http://localhost:8080/tasks \
 curl -X POST http://localhost:8080/task-1/execute
 ```
 
-### 📄 Get All Tasks
+###  Get All Tasks
 
 ```bash
 curl http://localhost:8080/
@@ -163,7 +163,7 @@ This guide explains how to containerize and run your **full-stack Task Manager a
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -177,7 +177,7 @@ This guide explains how to containerize and run your **full-stack Task Manager a
 
 ---
 
-## 🐋 Dockerfile (Multi-stage Build)
+##  Dockerfile (Multi-stage Build)
 
 ```Dockerfile
 # Stage 1: Build React app
@@ -204,7 +204,7 @@ CMD ["java", "-jar", "app.jar"]
 
 ---
 
-## 🧱 `docker-compose.yml`
+##  `docker-compose.yml`
 
 ```yaml
 version: "3.8"
@@ -241,7 +241,7 @@ volumes:
 
 ---
 
-## ▶️ How to Run the Application
+##  How to Run the Application
 
 ### 1. Build and Start All Services
 
@@ -249,11 +249,11 @@ volumes:
 docker-compose up --build
 ```
 
-> 🛠️ This will build the React frontend, Spring Boot backend, and start MongoDB in containers.
+>  This will build the React frontend, Spring Boot backend, and start MongoDB in containers.
 
 ---
 
-## 🔗 Access Points
+##  Access Points
 
 * **Web Application:**
   [http://localhost:8080](http://localhost:8080)
