@@ -1,53 +1,61 @@
-Task 2 – Docker Deployment Guide
-This guide helps you run your full-stack Task Manager app (Spring Boot + React + MongoDB) using Docker and Docker Compose.
+Here's a polished and properly formatted version of your **Docker Deployment Guide** suitable for a `README.md` file:
 
-Project Structure 
+---
 
+# 🐳 Docker Deployment Guide – Full-Stack Task Manager App
 
+This guide explains how to containerize and run your **full-stack Task Manager application** using Docker and Docker Compose. The stack includes:
+
+* **Spring Boot** for the backend
+* **React** for the frontend
+* **MongoDB** as the database
+
+---
+
+## 📁 Project Structure
+
+```
 .
-├── backend/
+├── backend/                # Spring Boot Backend (Java, Maven)
 │   └── src/, pom.xml, etc.
-├── frontend/
+├── frontend/               # React Frontend
 │   └── public/, src/, package.json, etc.
-├── Dockerfile
-├── docker-compose.yml
+├── Dockerfile              # Multi-stage build for frontend + backend
+├── docker-compose.yml      # Docker Compose configuration
+```
 
+---
 
+## 🐋 Dockerfile (Multi-stage Build)
 
-Dockerfile
-
+```Dockerfile
 # Stage 1: Build React app
 FROM node:22 AS frontend-builder
-
 WORKDIR /app
 COPY frontend/ /app/
 RUN npm install && npm run build
 
 # Stage 2: Build Spring Boot app
 FROM eclipse-temurin:21 AS backend-builder
-
 WORKDIR /app
 COPY backend/ /app/
 COPY --from=frontend-builder /app/build /app/src/main/resources/static
-
 RUN apt-get update && apt-get install -y maven && \
     mvn clean package -DskipTests
 
 # Stage 3: Run the final Spring Boot app
 FROM eclipse-temurin:21-jre
-
 WORKDIR /app
 COPY --from=backend-builder /app/target/*.jar app.jar
-
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
+```
 
-Docker compose File
+---
 
+## 🧱 `docker-compose.yml`
 
-
-
-yaml
+```yaml
 version: "3.8"
 
 services:
@@ -78,20 +86,53 @@ networks:
 
 volumes:
   mongo-data:
-  
-How to Run
-Build and Start All Services:
+```
 
-bash
+---
+
+## ▶️ How to Run the Application
+
+### 1. Build and Start All Services
+
+```bash
 docker-compose up --build
-Access the API:
+```
 
-http://localhost:8080
+> 🛠️ This will build the React frontend, Spring Boot backend, and start MongoDB in containers.
 
-Test the Backend (e.g., fetch tasks):
+---
 
-bash
-curl http://localhost:8080/tasks
-MongoDB GUI (Optional):
-Use a GUI tool (e.g., MongoDB Compass) to connect to:
-mongodb://localhost:27017
+## 🔗 Access Points
+
+* **Web Application:**
+  [http://localhost:8080](http://localhost:8080)
+
+* **Test API (example: fetch tasks):**
+
+  ```bash
+  curl http://localhost:8080/tasks
+  ```
+
+* **MongoDB GUI (Optional):**
+  Use [MongoDB Compass](https://www.mongodb.com/products/compass) or any MongoDB client to connect to:
+
+  ```
+  mongodb://localhost:27017
+  ```
+
+---
+
+## ✅ Tips
+
+* Make sure Docker and Docker Compose are installed.
+* Stop services with:
+
+  ```bash
+  docker-compose down
+  ```
+
+---
+
+Feel free to modify and expand this guide as your app evolves.
+
+Let me know if you want badges, screenshots, or CI/CD instructions added too!
