@@ -7,8 +7,8 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_BACKEND: rabinson402/taskmanager-backend
-  IMAGE_FRONTEND: rabinson402/taskmanager-frontend
+  IMAGE_BACKEND: guruvenkatesh03/taskmanager-backend
+  IMAGE_FRONTEND: guruvenkatesh03/taskmanager-frontend
 
 jobs:
   build-and-deploy:
