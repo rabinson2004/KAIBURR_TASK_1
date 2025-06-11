@@ -1,8 +1,6 @@
-Here's a polished and properly formatted version of your **Docker Deployment Guide** suitable for a `README.md` file:
 
----
 
-# 🐳 Docker Deployment Guide – Full-Stack Task Manager App
+# Task 2 - Docker Deployment Guide – Full-Stack Task Manager App
 
 This guide explains how to containerize and run your **full-stack Task Manager application** using Docker and Docker Compose. The stack includes:
 
@@ -121,18 +119,3 @@ docker-compose up --build
   ```
 
 ---
-
-## ✅ Tips
-
-* Make sure Docker and Docker Compose are installed.
-* Stop services with:
-
-  ```bash
-  docker-compose down
-  ```
-
----
-
-Feel free to modify and expand this guide as your app evolves.
-
-Let me know if you want badges, screenshots, or CI/CD instructions added too!
