@@ -1,9 +1,9 @@
-name: Fullstack CI/CD Pipeline
+name: Java CI/CD Pipeline
 
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   REGISTRY: docker.io
