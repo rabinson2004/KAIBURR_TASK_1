@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body{
+    background-color: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
+}
+
+.Line {
+    width: 60%;
+    margin: 8px 0;
+}
+.Line svg {
+    display: block;
+}
+.home-title{
+    font-size: 3rem;
+    color: black;
+    text-align:left;
+    padding: 0 12vh;
+}
+.home-title span{
+    color: rgb(106, 169, 106);
+}
+.highlighted-title {
+  display: inline-block;
+  position: relative;
+}
+
+.highlighted-title svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.home-subtitle{
+    font-size: 1.5rem;
+    background-color: #f9f9f9;
+    color: black;
+    text-align:left;
+    padding: 0 12vh;
+}
+.typing{
+    font-family: "Roboto Mono", monospace;
+      font-size: 2rem;
+      color: black;
+    width: fit-content;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      /* animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite; */
+      padding: 0 12vh;
+
+}
+
+.home-buttons{
+    display: flex;
+    padding: 20px 0;
+}
+.home-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : black;
+    font-size: 1rem;
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    padding-left: 12vh;
+}
+
+.Serve-button{
+    text-align: center;
+    justify-self: center;
+    background-color: #f9f9f9;
+    color: green;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+.svg-underline {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.svg-underline svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.green-underline svg path {
+  stroke: #4CAF50;
+}
+
+.blue-underline svg path {
+  stroke: #42A5F5;
+}
