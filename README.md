@@ -7,22 +7,22 @@ A **Java Spring Boot** application that provides REST APIs to manage and execute
 
 ## Screenshots
 
-# Get all tasks
+# GET ALL TASKS
 ![get](https://github.com/user-attachments/assets/5aac6b89-6f65-4bc7-88ea-50a2f843cb2a)
 
-# Get by id
+# GET BY ID
 ![getbyid](https://github.com/user-attachments/assets/f60f7d02-e0c4-488f-8c7d-0d67a199c435)
 
-# Delete by id
+# DELETE BY ID
 ![deltebyid](https://github.com/user-attachments/assets/3d49bddd-707e-436b-a194-e9e70dae11c0)
 
-# Verification of Deletion
+# VERIFICATION OF DELETION
 ![verificationofdeletcommand](https://github.com/user-attachments/assets/e9d1acf7-9122-42aa-a7b9-fdb8ad90946f)
 
-# Creation
+# CREATION
 ![creation](https://github.com/user-attachments/assets/05870559-3b2e-4b97-9a9d-4af8658ccdbb)
 
-# Updating through shell
+# UPDATING THROUGH SHELL
 ![updation](https://github.com/user-attachments/assets/d22f3ea0-473e-4630-b503-85b7389b6fe5)
 
 ---
